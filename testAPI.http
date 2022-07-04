@@ -1,2 +1,27 @@
-### homepage
+### Homepage
 GET http://localhost:3000/
+
+### List all genres
+GET http://localhost:3000/api/genres
+
+### Adding a new genre
+POST http://localhost:3000/api/genres
+Content-Type: application/json
+
+{
+  "name": "Adults"
+}
+
+### get a single genre
+GET  http://localhost:3000/api/genres/6
+
+### updating a genre
+PUT http://localhost:3000/api/genres/6
+Content-Type: application/json
+
+{
+  "name": "History"
+}
+
+### delete a genre 
+DELETE http://localhost:3000/api/genres/1
