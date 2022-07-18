@@ -1,6 +1,6 @@
 // modules
-const express = require('express');
 const Joi = require('joi');
+const express = require('express');
 const router = express.Router();
 
 // creating genres
@@ -21,12 +21,12 @@ router.get('/', (req, res) => {
 });
 
 // list all genres
-router.get('/api/genres', (req, res) => {
+router.get('/', (req, res) => {
   res.send(genres)
 });
 
 // posting a new genre
-router.post('/api/genres', (req, res) => {
+router.post('/', (req, res) => {
   // validation
   const { error } = validateGenres(req.body);
   if (error) return res.status(404).send(error.details[0].message);
@@ -41,14 +41,14 @@ router.post('/api/genres', (req, res) => {
 });
 
 // getting a single genre
-router.get('/api/genres/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   const genre = genres.find(g => g.id === parseInt(req.params.id));
   if (!genre) return res.status(404).send(`genre with given id ${req.params.id} not found`);
   res.send(genre);
 });
 
 // update a genre
-router.put('/api/genres/:id', (req, res) => {
+router.put('/', (req, res) => {
   const genre = genres.find(g => g.id === parseInt(req.params.id));
   if (!genre) return res.status(404).send(`genre with given id ${req.params.id} not found`);  
 
@@ -60,7 +60,7 @@ router.put('/api/genres/:id', (req, res) => {
 });
 
 // delete a genre
-router.delete('/api/genres/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   const genre = genres.find(g => g.id === parseInt(req.params.id));
   if (!genre) return res.status(404).send(`genre with given id ${req.params.id} not found`);
 
