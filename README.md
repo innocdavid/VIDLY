@@ -1,5 +1,4 @@
-https://img.shields.io/badge/Language-JavaScript-green
-https://img.shields.io/badge/Environment-NodeJs-yellowgreen
-https://img.shields.io/badge/Framework-ExpressJs-green
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/innocdavid/VIDLY?style=flat-square) ![GitHub](https://img.shields.io/github/license/innocdavid/VIDLY?color=%23F&logo=Github&style=flat-square)  ![Hackage-Deps](https://img.shields.io/hackage-deps/v/express?logo=express&style=flat-square)
+
 # VIDLY
-VIDLY an online movie library build in nodejs and express
+VIDLY an online movie library built in expressjs
