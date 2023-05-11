@@ -1,6 +1,7 @@
 {
   "name": "vidly",
   "version": "1.0.0",
+  "type": "module",
   "description": "Genre Movie Library",
   "main": "app.js",
   "scripts": {

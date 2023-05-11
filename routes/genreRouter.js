@@ -1,6 +1,6 @@
 // modules
-const Joi = require('joi');
-const express = require('express');
+import Joi from "joi";
+import express from "express";
 const router = express.Router();
 
 // creating genres
@@ -14,11 +14,6 @@ const genres = [
   {id: 7, name: 'Sport'},
   {id: 8, name: 'Animated'},
 ];
-
-//setting up routes
-router.get('/', (req, res) => {
-  res.send('Welcome, Movie Homepage');
-});
 
 // list all genres
 router.get('/', (req, res) => {
@@ -79,4 +74,4 @@ function validateGenres(genre) {
 }
 
 // exporting routes
-module.exports = router;
+export default router;
